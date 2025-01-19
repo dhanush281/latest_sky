@@ -323,7 +323,29 @@ PRODUCT_COPY_FILES += \
 	
 # QMI
 PRODUCT_PACKAGES += \
-    libvndfwk_detect_jni.qti_vendor:64
+    libprotobuf-cpp-full-3.9.1-vendorcompat
+
+# QMI
+PRODUCT_PACKAGES += \
+    libvndfwk_detect_jni.qti_vendor:64 # Needed by CNE app
+
+# QTI
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.systemhelper@1.0.vendor:64
+
+# RenderScript
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl:64
+
+# RIL
+PRODUCT_PACKAGES += \
+    android.hardware.radio.config@1.3.vendor:64 \
+    android.hardware.radio.deprecated@1.0.vendor:64
+
+PRODUCT_PACKAGES += \
+    Ims \
+    QtiTelephony \
+    librmnetctl
 
 # Rootdir
 PRODUCT_PACKAGES += \
