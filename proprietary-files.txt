@@ -65,7 +65,6 @@ vendor/lib64/libqtigefar.so;DISABLE_CHECKELF
 
 # Audio soundfx
 vendor/lib64/soundfx/libasphere.so
-vendor/lib64/soundfx/libshoebox.so
 
 # Audio configs
 vendor/etc/audio/sku_ravelin/audio_effects.conf
