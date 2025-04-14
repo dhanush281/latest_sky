@@ -34,7 +34,7 @@
     <dimen name="rounded_corner_radius">20dp</dimen>
 
     <!-- Default paddings for content around the corners. -->
-    <dimen name="rounded_corner_content_padding">0dp</dimen>
+    <dimen name="rounded_corner_content_padding">50px</dimen>
 
 	<!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
          when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
