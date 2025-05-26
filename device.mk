@@ -514,3 +514,5 @@ PRODUCT_BOOT_JARS += \
 
  # BCR
  $(call inherit-product, vendor/bcr/bcr.mk)
+
+ -include vendor/lineage-priv/keys/keys.mk

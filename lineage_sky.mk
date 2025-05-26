@@ -23,15 +23,9 @@ $(call inherit-product, $(DEVICE_PATH)/device.mk)
 # Inherit from the proprietary version
 $(call inherit-product, vendor/xiaomi/sky/sky-vendor.mk)
 
-# Maintainer username
-HORIZON_MAINTAINER := Dhanush
 
-# Face Unlock
-TARGET_FACE_UNLOCK_SUPPORTED := true
-
-# Gapps flags
-WITH_GMS := true
-WITH_GMS_VARIANT := core
+#GApps
+TARGET_USES_PICO_GAPPS := true
 
 ## Device identifier
 PRODUCT_DEVICE := sky
