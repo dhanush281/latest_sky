@@ -3,7 +3,7 @@ git clone https://github.com/suvojit213/vendor_bcr.git vendor/bcr
 
 # Clone the kernel source
 echo "Cloning kernel repository..."
-git clone https://github.com/dhanush281/android_xiaomi_sky_kernel.git device/xiaomi/sky-kernel
+git clone https://github.com/PixelOS-Devices/device_xiaomi_sky-kernel.git device/xiaomi/sky-kernel
 
 # Clone the dolby repository
 git clone https://github.com/dhanush281/android_hardware_dolby hardware/dolby
