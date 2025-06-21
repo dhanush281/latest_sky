@@ -1,4 +1,9 @@
 service vendor.vibrator-sky /vendor/bin/hw/android.hardware.vibrator-service.sky
     class hal
-    user nobody
-    group nobody
+    user system
+    group system input
+
+on fs
+     chown system system /sys/class/leds/vibrator/activate
+     chown system system /sys/class/leds/vibrator/duration
+     chown system system /sys/class/leds/vibrator/vmax_mv

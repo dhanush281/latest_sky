@@ -1,4 +1,4 @@
-/*Add commentMore actions
+/*
  * Copyright (C) 2019 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,7 +17,6 @@
 #pragma once
 
 #include <aidl/android/hardware/vibrator/BnVibrator.h>
-#include <android-base/thread_annotations.h>
 
 namespace aidl {
 namespace android {
@@ -25,7 +24,6 @@ namespace hardware {
 namespace vibrator {
 
 class Vibrator : public BnVibrator {
-  public:
     ndk::ScopedAStatus getCapabilities(int32_t* _aidl_return) override;
     ndk::ScopedAStatus off() override;
     ndk::ScopedAStatus on(int32_t timeoutMs,
@@ -33,9 +31,6 @@ class Vibrator : public BnVibrator {
     ndk::ScopedAStatus perform(Effect effect, EffectStrength strength,
                                const std::shared_ptr<IVibratorCallback>& callback,
                                int32_t* _aidl_return) override;
-    ndk::ScopedAStatus performVendorEffect(
-            const VendorEffect& effect,
-            const std::shared_ptr<IVibratorCallback>& callback) override;
     ndk::ScopedAStatus getSupportedEffects(std::vector<Effect>* _aidl_return) override;
     ndk::ScopedAStatus setAmplitude(float amplitude) override;
     ndk::ScopedAStatus setExternalControl(bool enabled) override;
@@ -59,24 +54,7 @@ class Vibrator : public BnVibrator {
     ndk::ScopedAStatus getSupportedBraking(std::vector<Braking>* supported) override;
     ndk::ScopedAStatus composePwle(const std::vector<PrimitivePwle> &composite,
                                    const std::shared_ptr<IVibratorCallback> &callback) override;
-    ndk::ScopedAStatus getFrequencyToOutputAccelerationMap(
-            std::vector<FrequencyAccelerationMapEntry>* _aidl_return) override;
-    ndk::ScopedAStatus getPwleV2PrimitiveDurationMaxMillis(int32_t* maxDurationMs) override;
-    ndk::ScopedAStatus getPwleV2PrimitiveDurationMinMillis(int32_t* minDurationMs) override;
-    ndk::ScopedAStatus getPwleV2CompositionSizeMax(int32_t* maxSize) override;
-    ndk::ScopedAStatus composePwleV2(const CompositePwleV2& composite,
-                                     const std::shared_ptr<IVibratorCallback>& callback) override;
 
-    void setGlobalVibrationCallback(const std::shared_ptr<IVibratorCallback>& callback);
-
-  private:
-    mutable std::mutex mMutex;
-    bool mIsVibrating GUARDED_BY(mMutex) = false;
-    int32_t mCapabilities GUARDED_BY(mMutex) = 0;
-    std::shared_ptr<IVibratorCallback> mVibrationCallback GUARDED_BY(mMutex) = nullptr;
-    std::shared_ptr<IVibratorCallback> mGlobalVibrationCallback GUARDED_BY(mMutex) = nullptr;
-
-    void dispatchVibrate(int32_t timeoutMs, const std::shared_ptr<IVibratorCallback>& callback);
 };
 
 }  // namespace vibrator

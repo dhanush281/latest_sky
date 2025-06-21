@@ -10,16 +10,14 @@ package {
 
 cc_library_static {
     name: "libvibratorskyimpl",
-    vendor_available: true,
-    host_supported: true,
+    vendor: true,
     shared_libs: [
         "libbase",
         "libbinder_ndk",
-        "android.hardware.vibrator-V3-ndk",
+        "android.hardware.vibrator-V2-ndk",
     ],
     export_include_dirs: ["include"],
     srcs: [
-        "VibrationSession.cpp",
         "Vibrator.cpp",
     ],
     visibility: [
@@ -49,10 +47,10 @@ cc_binary {
     shared_libs: [
         "libbase",
         "libbinder_ndk",
-        "android.hardware.vibrator-V3-ndk",
+        "android.hardware.vibrator-V2-ndk",
     ],
     static_libs: [
         "libvibratorskyimpl",
     ],
-    srcs: ["main.cpp"],    
+    srcs: ["main.cpp"],
 }
