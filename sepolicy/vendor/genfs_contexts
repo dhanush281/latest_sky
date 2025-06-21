@@ -26,3 +26,8 @@ genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/wakeup u:object_r:sysfs
 genfscon sysfs /devices/platform/soc/soc:goodix_fp/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:fpc1020/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/goodix_ts.0/wakeup u:object_r:sysfs_wakeup:s0
+
+# Vibrator
+genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-09/c42d000.qcom,spmi:qcom,pm7250b@3:qcom,vibrator@5300/leds/vibrator/activate                   u:object_r:sysfs_haptics:s0
+genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-09/c42d000.qcom,spmi:qcom,pm7250b@3:qcom,vibrator@5300/leds/vibrator/duration                   u:object_r:sysfs_haptics:s0
+genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-09/c42d000.qcom,spmi:qcom,pm7250b@3:qcom,vibrator@5300/leds/vibrator/vmax_max                   u:object_r:sysfs_haptics:s0Add comment
