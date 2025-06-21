@@ -1,0 +1,4 @@
+service vendor.vibrator-sky /vendor/bin/hw/android.hardware.vibrator-service.sky
+    class hal
+    user nobody
+    group nobody

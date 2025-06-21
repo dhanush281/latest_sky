@@ -4,9 +4,4 @@
         <version>3</version>
         <fqname>IVibrator/default</fqname>
     </hal>
-    <hal format="aidl">
-        <name>android.hardware.vibrator</name>
-        <version>3</version>
-        <fqname>IVibratorManager/default</fqname>
-    </hal>
 </manifest>

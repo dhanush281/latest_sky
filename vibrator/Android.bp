@@ -9,7 +9,7 @@ package {
 }
 
 cc_library_static {
-    name: "libvibratorexampleimpl",
+    name: "libvibratorskyimpl",
     vendor_available: true,
     host_supported: true,
     shared_libs: [
@@ -21,7 +21,6 @@ cc_library_static {
     srcs: [
         "VibrationSession.cpp",
         "Vibrator.cpp",
-        "VibratorManager.cpp",
     ],
     visibility: [
         ":__subpackages__",
@@ -42,9 +41,9 @@ prebuilt_etc {
 }
 
 cc_binary {
-    name: "android.hardware.vibrator-service.example",
+    name: "android.hardware.vibrator-service.sky",
     relative_install_path: "hw",
-    init_rc: ["vibrator-default.rc"],
+    init_rc: ["vibrator-sky.rc"],
     vintf_fragments: ["android.hardware.vibrator.xml"],
     vendor: true,
     shared_libs: [
@@ -53,7 +52,7 @@ cc_binary {
         "android.hardware.vibrator-V3-ndk",
     ],
     static_libs: [
-        "libvibratorexampleimpl",
+        "libvibratorskyimpl",
     ],
     srcs: ["main.cpp"],    
 }
