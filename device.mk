@@ -116,6 +116,9 @@ PRODUCT_PACKAGES += \
     android.hardware.boot-service.qti \
     android.hardware.boot-service.qti.recovery
 
+# Properties
+include $(DEVICE_PATH)/configs/properties/default.mk
+
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio-service.compat
