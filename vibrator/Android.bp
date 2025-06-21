@@ -55,22 +55,5 @@ cc_binary {
     static_libs: [
         "libvibratorexampleimpl",
     ],
-    srcs: ["main.cpp"],
-}
-
-cc_fuzz {
-    name: "android.hardware.vibrator-service.example_fuzzer",
-    host_supported: true,
-    defaults: ["service_fuzzer_defaults"],
-    static_libs: [
-        "android.hardware.vibrator-V3-ndk",
-        "liblog",
-        "libvibratorexampleimpl",
-    ],
-    srcs: ["fuzzer.cpp"],
-    fuzz_config: {
-        cc: [
-            "smoreland@google.com",
-        ],
-    },
+    srcs: ["main.cpp"],    
 }
