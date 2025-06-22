@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_sky.mk
+    $(LOCAL_DIR)/voltage_sky.mk
