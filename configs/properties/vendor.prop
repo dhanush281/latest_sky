@@ -117,6 +117,7 @@ vendor.audio.hal.boot.timeout.ms=20000
 vendor.audio.hal.output.suspend.supported=true
 vendor.audio.hdr.record.enable=false
 vendor.audio.hw.aac.encoder=false
+vendor.audio.feature.compr_voip.enable=true
 vendor.audio.offload.buffer.size.kb=32
 vendor.audio.offload.gapless.enabled=true
 vendor.audio.offload.multiaac.enable=true
