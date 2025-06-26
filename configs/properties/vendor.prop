@@ -259,6 +259,10 @@ vendor.gralloc.disable_ubwc=0
 debug.c2.use_dmabufheaps=1
 debug.stagefright.c2inputsurface=-1
 
+# HWUI
+debug.hwui.use_hint_manager=true
+debug.hwui.target_cpu_time_percent=30
+
 # Misc
 sys.vendor.shutdown.waittime=500
 
